@@ -7,6 +7,7 @@
     </header>
     <main class="text-center">
       <Songs :songs="songs" />
+      <Loader :is-loading="isLoading" />
     </main>
   </div>
 </template>
@@ -15,22 +16,27 @@
 import axios from "axios";
 
 import Songs from "./components/Songs.vue";
+import Loader from "./components/Loader.vue";
 export default {
   name: "App",
   components: {
     Songs,
+    Loader,
   },
   data() {
     return {
       songs: [],
+      isLoading: false,
     };
   },
   methods: {
     getSongs() {
+      this.isLoading = true;
       axios
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then((res) => {
           this.songs = res.data.response;
+          this.isLoading = false;
         });
     },
   },
@@ -56,6 +62,7 @@ header {
   background-color: $header-bg-color;
 }
 main {
+  height: 100vh;
   background-color: $main-bg-color;
   color: white;
   padding: 50px 0;
