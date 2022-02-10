@@ -1,9 +1,11 @@
 <template>
   <div>
     <header>
-      <!-- <figure><img src="../assets/img/logo.png" alt="logo" /></figure> -->
+      <figure>
+        <img src="./assets/img/logo-spotify.jpg" alt="logo" />
+      </figure>
     </header>
-    <main>main</main>
+    <main class="text-center">main</main>
   </div>
 </template>
 
@@ -15,6 +17,8 @@ export default {
 </script>
 
 <style lang="scss">
+// importo bootstrap
+@import "bootstrap";
 // importo tutto il css
 @import "./assets/scss/style.scss";
 
@@ -28,7 +32,11 @@ header {
   background-color: $header-bg-color;
 }
 main {
-  height: 100vh;
+  height: calc(100vh - 50px);
   background-color: $main-bg-color;
+  color: white;
+}
+img {
+  height: 50px;
 }
 </style>
