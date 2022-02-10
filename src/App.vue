@@ -5,14 +5,19 @@
         <img src="./assets/img/logo-spotify.jpg" alt="logo" />
       </figure>
     </header>
-    <main class="text-center">main</main>
+    <main class="text-center">
+      <Songs />
+    </main>
   </div>
 </template>
 
 <script>
+import Songs from "./components/Songs.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    Songs,
+  },
 };
 </script>
 
@@ -35,6 +40,7 @@ main {
   height: calc(100vh - 50px);
   background-color: $main-bg-color;
   color: white;
+  padding: 50px 0;
 }
 img {
   height: 50px;
