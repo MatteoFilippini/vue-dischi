@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div>
+    <header>header</header>
+    <main>main</main>
+  </div>
 </template>
 
 <script>
@@ -10,5 +13,11 @@ export default {
 </script>
 
 <style lang="scss">
+// importo tutto il css
 @import "./assets/scss/style.scss";
+
+header {
+  height: 50px;
+  background-color: $header-bg-color;
+}
 </style>
