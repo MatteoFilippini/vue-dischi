@@ -26,18 +26,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import "../assets/scss/style.scss";
-//   background-color: $header-bg-color;
+@import "../assets/scss/-var.scss";
 .song-card {
   height: 340px;
-  background-color: red;
+  background-color: $header-bg-color;
   .song-desc {
     h4 {
       color: white;
       text-transform: uppercase;
     }
     p {
-      color: blue;
+      color: darkgray;
     }
   }
 }

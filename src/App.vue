@@ -56,7 +56,6 @@ header {
   background-color: $header-bg-color;
 }
 main {
-  height: 100%;
   background-color: $main-bg-color;
   color: white;
   padding: 50px 0;
