@@ -6,17 +6,36 @@
       </figure>
     </header>
     <main class="text-center">
-      <Songs />
+      <Songs :songs="songs" />
     </main>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 import Songs from "./components/Songs.vue";
 export default {
   name: "App",
   components: {
     Songs,
+  },
+  data() {
+    return {
+      songs: [],
+    };
+  },
+  methods: {
+    getSongs() {
+      axios
+        .get("https://flynn.boolean.careers/exercises/api/array/music")
+        .then((res) => {
+          this.songs = res.data.response;
+        });
+    },
+  },
+  mounted() {
+    this.getSongs();
   },
 };
 </script>
@@ -37,7 +56,7 @@ header {
   background-color: $header-bg-color;
 }
 main {
-  height: calc(100vh - 50px);
+  height: 100%;
   background-color: $main-bg-color;
   color: white;
   padding: 50px 0;

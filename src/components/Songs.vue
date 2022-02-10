@@ -2,14 +2,14 @@
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-2">
-          <div class="song-card text-center">
+        <div class="col-2 p-2" v-for="(song, index) in songs" :key="index">
+          <div class="song-card text-center p-3">
             <figure>
-              <img src="../assets/img/logo-spotify.jpg" alt="song" />
+              <img :src="song.poster" :alt="song.title" class="img-fluid" />
             </figure>
             <div class="song-desc">
-              <h4>titolo</h4>
-              <p>Autore</p>
+              <h4>{{ song.title }}</h4>
+              <p>{{ song.author }}</p>
             </div>
           </div>
         </div>
@@ -21,6 +21,7 @@
 <script>
 export default {
   name: "Songs",
+  props: ["songs"],
 };
 </script>
 
@@ -28,13 +29,8 @@ export default {
 // @import "../assets/scss/style.scss";
 //   background-color: $header-bg-color;
 .song-card {
-  height: 400px;
-  width: 200px;
+  height: 340px;
   background-color: red;
-  img {
-    height: 180px;
-    margin-top: 10px;
-  }
   .song-desc {
     h4 {
       color: white;
