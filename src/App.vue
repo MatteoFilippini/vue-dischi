@@ -1,6 +1,8 @@
 <template>
   <div>
-    <header>header</header>
+    <header>
+      <!-- <figure><img src="../assets/img/logo.png" alt="logo" /></figure> -->
+    </header>
     <main>main</main>
   </div>
 </template>
@@ -16,8 +18,17 @@ export default {
 // importo tutto il css
 @import "./assets/scss/style.scss";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 header {
   height: 50px;
   background-color: $header-bg-color;
+}
+main {
+  height: 100vh;
+  background-color: $main-bg-color;
 }
 </style>
