@@ -2,7 +2,7 @@
   <div>
     <header>
       <Logo />
-      <Select :songs="songs" />
+      <Select :songs="songs" @genere="findSong" />
     </header>
     <main class="text-center">
       <Songs :songs="songs" />
@@ -41,6 +41,9 @@ export default {
           this.songs = res.data.response;
           this.isLoading = false;
         });
+    },
+    findSong() {
+      console.log("a");
     },
   },
   mounted() {

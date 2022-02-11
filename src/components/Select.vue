@@ -1,5 +1,5 @@
 <template>
-  <select class="form-select me-3">
+  <select class="form-select me-3" @change="$emit('genere')">
     <option :value="index" v-for="(song, index) in songs" :key="index">
       {{ song.genre }}
     </option>
@@ -10,6 +10,9 @@
 export default {
   name: "Select",
   props: ["songs"],
+  data() {
+    return {};
+  },
 };
 </script>
 
