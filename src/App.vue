@@ -5,7 +5,7 @@
       <Select :songs="songs" @genere="findSong" />
     </header>
     <main class="text-center">
-      <Songs :songs="songs" />
+      <Songs :songs="songs" :gen="filterGener" />
       <Loader :is-loading="isLoading" />
     </main>
   </div>
@@ -50,7 +50,6 @@ export default {
     },
     findSong(i) {
       this.gener = i;
-      console.log(this.gener);
     },
   },
   mounted() {
