@@ -2,7 +2,7 @@
   <div>
     <header>
       <Logo />
-      <Select />
+      <Select :songs="songs" />
     </header>
     <main class="text-center">
       <Songs :songs="songs" />
