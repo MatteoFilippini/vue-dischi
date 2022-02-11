@@ -33,13 +33,11 @@ export default {
       gener: "",
     };
   },
-  // computed: {
-  //   filterGener() {
-  //     return this.songs.filter((song) => {
-  //       song.gener.includes(gener);
-  //     });
-  //   },
-  // },
+  computed: {
+    filterGener() {
+      return this.songs.filter((song) => song.genre.includes(this.gener));
+    },
+  },
   methods: {
     getSongs() {
       this.isLoading = true;
@@ -51,7 +49,8 @@ export default {
         });
     },
     findSong(i) {
-      console.log(i);
+      this.gener = i;
+      console.log(this.gener);
     },
   },
   mounted() {

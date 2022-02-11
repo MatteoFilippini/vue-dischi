@@ -19,7 +19,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/-var.scss";
-
 .song-card {
   height: 340px;
   background-color: $header-bg-color;

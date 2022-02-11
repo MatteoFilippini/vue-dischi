@@ -13,7 +13,7 @@
 <script>
 export default {
   name: "Select",
-  props: ["songs"],
+  props: ["songs", "g"],
   data() {
     return {
       valueSelect: "",
