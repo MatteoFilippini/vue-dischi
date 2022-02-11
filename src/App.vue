@@ -30,8 +30,16 @@ export default {
     return {
       songs: [],
       isLoading: false,
+      gener: "",
     };
   },
+  // computed: {
+  //   filterGener() {
+  //     return this.songs.filter((song) => {
+  //       song.gener.includes(gener);
+  //     });
+  //   },
+  // },
   methods: {
     getSongs() {
       this.isLoading = true;
@@ -42,8 +50,8 @@ export default {
           this.isLoading = false;
         });
     },
-    findSong() {
-      console.log("a");
+    findSong(i) {
+      console.log(i);
     },
   },
   mounted() {
