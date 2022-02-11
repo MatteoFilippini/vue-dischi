@@ -1,9 +1,8 @@
 <template>
   <div>
     <header>
-      <figure>
-        <img src="./assets/img/logo-spotify.jpg" alt="logo" />
-      </figure>
+      <Logo />
+      <Select />
     </header>
     <main class="text-center">
       <Songs :songs="songs" />
@@ -15,13 +14,17 @@
 <script>
 import axios from "axios";
 
+import Logo from "./components/Logo.vue";
 import Songs from "./components/Songs.vue";
+import Select from "./components/Select.vue";
 import Loader from "./components/Loader.vue";
 export default {
   name: "App",
   components: {
     Songs,
     Loader,
+    Select,
+    Logo,
   },
   data() {
     return {
@@ -60,14 +63,13 @@ export default {
 header {
   height: 50px;
   background-color: $header-bg-color;
+  display: flex;
+  justify-content: space-between;
 }
 main {
-  height: 100vh;
+  height: 100%;
   background-color: $main-bg-color;
   color: white;
   padding: 50px 0;
-}
-img {
-  height: 50px;
 }
 </style>
