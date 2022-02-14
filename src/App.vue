@@ -37,7 +37,7 @@ export default {
     filterGener() {
       if (!this.gener) return this.songs;
 
-      return this.songs.filter((song) => song.genre.includes(this.gener));
+      return this.songs.filter((song) => song.genre === this.gener);
     },
   },
   methods: {
