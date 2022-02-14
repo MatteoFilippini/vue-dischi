@@ -2,8 +2,8 @@
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-2 p-2" v-for="(song, index) in gen" :key="index">
-          <SongCard :song="song" />
+        <div class="col-2 p-2" v-for="(unpippo, index) in pallino" :key="index">
+          <SongCard :matteo="unpippo" />
         </div>
       </div>
     </div>
@@ -14,7 +14,7 @@
 import SongCard from "./SongCard.vue";
 export default {
   name: "Songs",
-  props: ["songs", "gen"],
+  props: ["pallino"],
   components: {
     SongCard,
   },

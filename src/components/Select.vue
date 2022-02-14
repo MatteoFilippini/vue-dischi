@@ -4,8 +4,13 @@
     @change="$emit('genere', valueSelect)"
     v-model="valueSelect"
   >
-    <option :value="song.genre" v-for="(song, index) in songs" :key="index">
-      {{ song.genre }}
+    <option value="">Tutti i generi</option>
+    <option
+      :value="uno.genre"
+      v-for="(uno, index) in pincopallino"
+      :key="index"
+    >
+      {{ uno.genre }}
     </option>
   </select>
 </template>
@@ -13,7 +18,7 @@
 <script>
 export default {
   name: "Select",
-  props: ["songs", "g"],
+  props: ["pincopallino"],
   data() {
     return {
       valueSelect: "",
@@ -26,7 +31,7 @@ export default {
 @import "../assets/scss/-var.scss";
 
 select {
-  width: 100px;
+  width: 25%;
   background-color: $main-bg-color;
   color: white;
 }

@@ -1,11 +1,11 @@
 <template>
   <div class="song-card text-center p-3">
     <figure>
-      <img :src="song.poster" :alt="song.title" class="img-fluid" />
+      <img :src="matteo.poster" :alt="matteo.title" class="img-fluid" />
     </figure>
     <div class="song-desc">
-      <h4>{{ song.title }}</h4>
-      <p>{{ song.author }}</p>
+      <h4>{{ matteo.title }}</h4>
+      <p>{{ matteo.author }}</p>
     </div>
   </div>
 </template>
@@ -13,7 +13,7 @@
 <script>
 export default {
   name: "SongCard",
-  props: ["song"],
+  props: ["matteo"],
 };
 </script>
 

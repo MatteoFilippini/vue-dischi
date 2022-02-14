@@ -1,5 +1,4 @@
 <template>
-  <!-- <div></div> -->
   <img src="../assets/img/Spotify-vector.png" alt="logo" />
 </template>
 

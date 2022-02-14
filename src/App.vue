@@ -2,10 +2,10 @@
   <div>
     <header>
       <Logo />
-      <Select :songs="songs" @genere="findSong" />
+      <Select :pincopallino="songs" @genere="findSong" />
     </header>
     <main class="text-center">
-      <Songs :songs="songs" :gen="filterGener" />
+      <Songs :pallino="filterGener" />
       <Loader :is-loading="isLoading" />
     </main>
   </div>
@@ -35,6 +35,8 @@ export default {
   },
   computed: {
     filterGener() {
+      if (!this.gener) return this.songs;
+
       return this.songs.filter((song) => song.genre.includes(this.gener));
     },
   },
